@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   // reduce the number of pizza generated to 30
   // move document.getElementById outside of the loop so it won't go through the dom as the loop goes
-  var movingPizzas = document.getElementById("#movingPizzas1");
+  var movingPizzas = document.getElementById("movingPizzas1");
   for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
