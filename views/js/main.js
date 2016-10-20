@@ -448,6 +448,7 @@ var resizePizzas = function(size) {
   // }
 
   // Iterates through pizza elements on the page and changes their widths
+  // Get rid of determineDx function in order to reduce the function call in for loop
   function changePizzaSizes(size) {
     switch(size) {
       case "1":
@@ -514,7 +515,7 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
-  //remove scrollTop from the for loop so that it won't need to do layout before style
+  //remove scrollTop from the for loop to avoid layout thrashing
   var scrollTop = document.body.scrollTop / 1250;
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(scrollTop + (i % 5));
